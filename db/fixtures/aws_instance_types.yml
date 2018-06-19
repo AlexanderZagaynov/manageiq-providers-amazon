@@ -1058,7 +1058,7 @@ x1.16xlarge:
   :instance_store_size: 2061584302080.0
   :instance_store_size_gb: 1920.0
   :instance_store_volumes: 1
-  :instance_store_type: 
+  :instance_store_type: SSD
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1079,14 +1079,14 @@ x1.32xlarge:
   :name: x1.32xlarge
   :family: Memory optimized
   :description: X1 Memory Optimized 32XL
-  :memory: 1073741824.0
-  :memory_gb: 1.0
+  :memory: 0.0
+  :memory_gb: 0.0
   :vcpu: 128
   :ebs_only: false
   :instance_store_size: 4123168604160.0
   :instance_store_size_gb: 3840.0
   :instance_store_volumes: 2
-  :instance_store_type: 
+  :instance_store_type: SSD
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1114,7 +1114,7 @@ x1e.xlarge:
   :instance_store_size: 128849018880.0
   :instance_store_size_gb: 120.0
   :instance_store_volumes: 1
-  :instance_store_type: 
+  :instance_store_type: SSD
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1142,7 +1142,7 @@ x1e.2xlarge:
   :instance_store_size: 257698037760.0
   :instance_store_size_gb: 240.0
   :instance_store_volumes: 1
-  :instance_store_type: 
+  :instance_store_type: SSD
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1170,7 +1170,7 @@ x1e.4xlarge:
   :instance_store_size: 515396075520.0
   :instance_store_size_gb: 480.0
   :instance_store_volumes: 1
-  :instance_store_type: 
+  :instance_store_type: SSD
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1198,7 +1198,7 @@ x1e.8xlarge:
   :instance_store_size: 1030792151040.0
   :instance_store_size_gb: 960.0
   :instance_store_volumes: 1
-  :instance_store_type: 
+  :instance_store_type: SSD
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1219,14 +1219,14 @@ x1e.16xlarge:
   :name: x1e.16xlarge
   :family: Memory optimized
   :description: X1E Memory Optimized 16XL
-  :memory: 1073741824.0
-  :memory_gb: 1.0
+  :memory: 0.0
+  :memory_gb: 0.0
   :vcpu: 64
   :ebs_only: false
   :instance_store_size: 2061584302080.0
   :instance_store_size_gb: 1920.0
   :instance_store_volumes: 1
-  :instance_store_type: 
+  :instance_store_type: SSD
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1247,14 +1247,14 @@ x1e.32xlarge:
   :name: x1e.32xlarge
   :family: Memory optimized
   :description: X1E Memory Optimized 32XL
-  :memory: 3221225472.0
-  :memory_gb: 3.0
+  :memory: 0.0
+  :memory_gb: 0.0
   :vcpu: 128
   :ebs_only: false
   :instance_store_size: 4123168604160.0
   :instance_store_size_gb: 3840.0
   :instance_store_volumes: 2
-  :instance_store_type: 
+  :instance_store_type: SSD
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1419,8 +1419,8 @@ i3.xlarge:
   :memory_gb: 30.5
   :vcpu: 4
   :ebs_only: false
-  :instance_store_size: 102005473280.0
-  :instance_store_size_gb: 95.0
+  :instance_store_size: 1020054732800.0
+  :instance_store_size_gb: 950.0
   :instance_store_volumes: 1
   :instance_store_type: NVMe SSD
   :architecture:
@@ -1447,8 +1447,8 @@ i3.2xlarge:
   :memory_gb: 61.0
   :vcpu: 8
   :ebs_only: false
-  :instance_store_size: 20401094656.0
-  :instance_store_size_gb: 19.0
+  :instance_store_size: 2040109465600.0
+  :instance_store_size_gb: 1900.0
   :instance_store_volumes: 1
   :instance_store_type: NVMe SSD
   :architecture:
@@ -1475,8 +1475,8 @@ i3.4xlarge:
   :memory_gb: 122.0
   :vcpu: 16
   :ebs_only: false
-  :instance_store_size: 40802189312.0
-  :instance_store_size_gb: 38.0
+  :instance_store_size: 4080218931200.0
+  :instance_store_size_gb: 3800.0
   :instance_store_volumes: 2
   :instance_store_type: NVMe SSD
   :architecture:
@@ -1503,8 +1503,8 @@ i3.8xlarge:
   :memory_gb: 244.0
   :vcpu: 32
   :ebs_only: false
-  :instance_store_size: 81604378624.0
-  :instance_store_size_gb: 76.0
+  :instance_store_size: 8160437862400.0
+  :instance_store_size_gb: 7600.0
   :instance_store_volumes: 4
   :instance_store_type: NVMe SSD
   :architecture:
@@ -1531,8 +1531,8 @@ i3.16xlarge:
   :memory_gb: 488.0
   :vcpu: 64
   :ebs_only: false
-  :instance_store_size: 163208757248.0
-  :instance_store_size_gb: 152.0
+  :instance_store_size: 16320875724800.0
+  :instance_store_size_gb: 15200.0
   :instance_store_volumes: 8
   :instance_store_type: NVMe SSD
   :architecture:
@@ -2119,6 +2119,174 @@ c5.18xlarge:
   :enhanced_networking: true
   :cluster_networking: 
   :vpc_only: true
+c5d.large:
+  :deprecated: false
+  :name: c5d.large
+  :family: Compute optimized
+  :description: C5D Compute Optimized Large
+  :memory: 4294967296.0
+  :memory_gb: 4.0
+  :vcpu: 2
+  :ebs_only: false
+  :instance_store_size: 53687091200.0
+  :instance_store_size_gb: 50.0
+  :instance_store_volumes: 1
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :up_to_10_gigabit
+  :physical_processor: Intel Xeon Platinum 8124M
+  :processor_clock_speed: 3.0 Ghz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
+c5d.xlarge:
+  :deprecated: false
+  :name: c5d.xlarge
+  :family: Compute optimized
+  :description: C5D Compute Optimized XL
+  :memory: 8589934592.0
+  :memory_gb: 8.0
+  :vcpu: 4
+  :ebs_only: false
+  :instance_store_size: 107374182400.0
+  :instance_store_size_gb: 100.0
+  :instance_store_volumes: 1
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :up_to_10_gigabit
+  :physical_processor: Intel Xeon Platinum 8124M
+  :processor_clock_speed: 3.0 Ghz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
+c5d.2xlarge:
+  :deprecated: false
+  :name: c5d.2xlarge
+  :family: Compute optimized
+  :description: C5D Compute Optimized 2XL
+  :memory: 17179869184.0
+  :memory_gb: 16.0
+  :vcpu: 8
+  :ebs_only: false
+  :instance_store_size: 214748364800.0
+  :instance_store_size_gb: 200.0
+  :instance_store_volumes: 1
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :up_to_10_gigabit
+  :physical_processor: Intel Xeon Platinum 8124M
+  :processor_clock_speed: 3.0 Ghz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
+c5d.4xlarge:
+  :deprecated: false
+  :name: c5d.4xlarge
+  :family: Compute optimized
+  :description: C5D Compute Optimized 4XL
+  :memory: 34359738368.0
+  :memory_gb: 32.0
+  :vcpu: 16
+  :ebs_only: false
+  :instance_store_size: 429496729600.0
+  :instance_store_size_gb: 400.0
+  :instance_store_volumes: 1
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :up_to_10_gigabit
+  :physical_processor: Intel Xeon Platinum 8124M
+  :processor_clock_speed: 3.0 Ghz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
+c5d.9xlarge:
+  :deprecated: false
+  :name: c5d.9xlarge
+  :family: Compute optimized
+  :description: C5D Compute Optimized 9XL
+  :memory: 77309411328.0
+  :memory_gb: 72.0
+  :vcpu: 36
+  :ebs_only: false
+  :instance_store_size: 966367641600.0
+  :instance_store_size_gb: 900.0
+  :instance_store_volumes: 1
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :very_high
+  :physical_processor: Intel Xeon Platinum 8124M
+  :processor_clock_speed: 3.0 Ghz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
+c5d.18xlarge:
+  :deprecated: false
+  :name: c5d.18xlarge
+  :family: Compute optimized
+  :description: C5D Compute Optimized 18XL
+  :memory: 154618822656.0
+  :memory_gb: 144.0
+  :vcpu: 72
+  :ebs_only: false
+  :instance_store_size: 1932735283200.0
+  :instance_store_size_gb: 1800.0
+  :instance_store_volumes: 1
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :very_high
+  :physical_processor: Intel Xeon Platinum 8124M
+  :processor_clock_speed: 3.0 Ghz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
 cc1.4xlarge:
   :deprecated: true
   :name: cc1.4xlarge
@@ -2626,8 +2794,8 @@ d2.8xlarge:
 f1.2xlarge:
   :deprecated: false
   :name: f1.2xlarge
-  :family: GPU instance
-  :description: F1 Gpu Instance 2XL
+  :family: FPGA Instances
+  :description: F1 Fpga Instances 2XL
   :memory: 130996502528.0
   :memory_gb: 122.0
   :vcpu: 8
@@ -2654,8 +2822,8 @@ f1.2xlarge:
 f1.16xlarge:
   :deprecated: false
   :name: f1.16xlarge
-  :family: GPU instance
-  :description: F1 Gpu Instance 16XL
+  :family: FPGA Instances
+  :description: F1 Fpga Instances 16XL
   :memory: 1047972020224.0
   :memory_gb: 976.0
   :vcpu: 64
@@ -2847,6 +3015,174 @@ m5.24xlarge:
   :enhanced_networking: true
   :cluster_networking: 
   :vpc_only: true
+m5d.large:
+  :deprecated: false
+  :name: m5d.large
+  :family: General purpose
+  :description: M5D General Purpose Large
+  :memory: 8589934592.0
+  :memory_gb: 8.0
+  :vcpu: 2
+  :ebs_only: false
+  :instance_store_size: 80530636800.0
+  :instance_store_size_gb: 75.0
+  :instance_store_volumes: 1
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :up_to_10_gigabit
+  :physical_processor: Intel Xeon Platinum 8175
+  :processor_clock_speed: 2.5 GHz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
+m5d.xlarge:
+  :deprecated: false
+  :name: m5d.xlarge
+  :family: General purpose
+  :description: M5D General Purpose XL
+  :memory: 17179869184.0
+  :memory_gb: 16.0
+  :vcpu: 4
+  :ebs_only: false
+  :instance_store_size: 161061273600.0
+  :instance_store_size_gb: 150.0
+  :instance_store_volumes: 1
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :up_to_10_gigabit
+  :physical_processor: Intel Xeon Platinum 8175
+  :processor_clock_speed: 2.5 GHz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
+m5d.2xlarge:
+  :deprecated: false
+  :name: m5d.2xlarge
+  :family: General purpose
+  :description: M5D General Purpose 2XL
+  :memory: 34359738368.0
+  :memory_gb: 32.0
+  :vcpu: 8
+  :ebs_only: false
+  :instance_store_size: 322122547200.0
+  :instance_store_size_gb: 300.0
+  :instance_store_volumes: 1
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :up_to_10_gigabit
+  :physical_processor: Intel Xeon Platinum 8175
+  :processor_clock_speed: 2.5 GHz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
+m5d.4xlarge:
+  :deprecated: false
+  :name: m5d.4xlarge
+  :family: General purpose
+  :description: M5D General Purpose 4XL
+  :memory: 68719476736.0
+  :memory_gb: 64.0
+  :vcpu: 16
+  :ebs_only: false
+  :instance_store_size: 644245094400.0
+  :instance_store_size_gb: 600.0
+  :instance_store_volumes: 2
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :up_to_10_gigabit
+  :physical_processor: Intel Xeon Platinum 8175
+  :processor_clock_speed: 2.5 GHz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
+m5d.12xlarge:
+  :deprecated: false
+  :name: m5d.12xlarge
+  :family: General purpose
+  :description: M5D General Purpose 12XL
+  :memory: 206158430208.0
+  :memory_gb: 192.0
+  :vcpu: 48
+  :ebs_only: false
+  :instance_store_size: 1932735283200.0
+  :instance_store_size_gb: 1800.0
+  :instance_store_volumes: 2
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :very_high
+  :physical_processor: Intel Xeon Platinum 8175
+  :processor_clock_speed: 2.5 GHz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
+m5d.24xlarge:
+  :deprecated: false
+  :name: m5d.24xlarge
+  :family: General purpose
+  :description: M5D General Purpose 24XL
+  :memory: 412316860416.0
+  :memory_gb: 384.0
+  :vcpu: 96
+  :ebs_only: false
+  :instance_store_size: 3865470566400.0
+  :instance_store_size_gb: 3600.0
+  :instance_store_volumes: 4
+  :instance_store_type: NVMe SSD
+  :architecture:
+  - :x86_64
+  :virtualization_type:
+  - :hvm
+  :network_performance: :very_high
+  :physical_processor: Intel Xeon Platinum 8175
+  :processor_clock_speed: 2.5 GHz
+  :intel_aes_ni: true
+  :intel_avx: true
+  :intel_avx2: true
+  :intel_turbo: true
+  :ebs_optimized_available: 
+  :enhanced_networking: true
+  :cluster_networking: 
+  :vpc_only: 
 h1.2xlarge:
   :deprecated: false
   :name: h1.2xlarge
