@@ -11,7 +11,7 @@ t1.micro:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :i386
   - :x86_64
@@ -19,15 +19,15 @@ t1.micro:
   - :paravirtual
   :network_performance: :very_low
   :physical_processor: Variable
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 t2.nano:
   :deprecated: false
   :name: t2.nano
@@ -40,7 +40,7 @@ t2.nano:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :i386
   - :x86_64
@@ -51,11 +51,11 @@ t2.nano:
   :processor_clock_speed: Up to 3.3 GHz
   :intel_aes_ni: true
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
   :vpc_only: true
 t2.micro:
   :deprecated: false
@@ -69,7 +69,7 @@ t2.micro:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :i386
   - :x86_64
@@ -80,11 +80,11 @@ t2.micro:
   :processor_clock_speed: Up to 3.3 GHz
   :intel_aes_ni: true
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
   :vpc_only: true
 t2.small:
   :deprecated: false
@@ -98,7 +98,7 @@ t2.small:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :i386
   - :x86_64
@@ -109,11 +109,11 @@ t2.small:
   :processor_clock_speed: Up to 3.3 GHz
   :intel_aes_ni: true
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
   :vpc_only: true
 t2.medium:
   :deprecated: false
@@ -127,7 +127,7 @@ t2.medium:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :i386
   - :x86_64
@@ -138,11 +138,11 @@ t2.medium:
   :processor_clock_speed: Up to 3.3 GHz
   :intel_aes_ni: true
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
   :vpc_only: true
 t2.large:
   :deprecated: false
@@ -156,7 +156,7 @@ t2.large:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -166,11 +166,11 @@ t2.large:
   :processor_clock_speed: Up to 3.0 GHz
   :intel_aes_ni: true
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
   :vpc_only: true
 t2.xlarge:
   :deprecated: false
@@ -184,7 +184,7 @@ t2.xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -194,11 +194,11 @@ t2.xlarge:
   :processor_clock_speed: Up to 3.0 GHz
   :intel_aes_ni: true
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
   :vpc_only: true
 t2.2xlarge:
   :deprecated: false
@@ -212,7 +212,7 @@ t2.2xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -222,11 +222,11 @@ t2.2xlarge:
   :processor_clock_speed: Up to 3.0 GHz
   :intel_aes_ni: true
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
   :vpc_only: true
 m1.small:
   :deprecated: true
@@ -240,7 +240,7 @@ m1.small:
   :instance_store_size: 171798691840.0
   :instance_store_size_gb: 160.0
   :instance_store_volumes: 1
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :i386
   - :x86_64
@@ -248,15 +248,15 @@ m1.small:
   - :paravirtual
   :network_performance: :low
   :physical_processor: Intel Xeon Family
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 m1.medium:
   :deprecated: true
   :name: m1.medium
@@ -269,7 +269,7 @@ m1.medium:
   :instance_store_size: 440234147840.0
   :instance_store_size_gb: 410.0
   :instance_store_volumes: 1
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :i386
   - :x86_64
@@ -277,15 +277,15 @@ m1.medium:
   - :paravirtual
   :network_performance: :moderate
   :physical_processor: Intel Xeon Family
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 m1.large:
   :deprecated: true
   :name: m1.large
@@ -298,22 +298,22 @@ m1.large:
   :instance_store_size: 901943132160.0
   :instance_store_size_gb: 840.0
   :instance_store_volumes: 2
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
   - :paravirtual
   :network_performance: :moderate
   :physical_processor: Intel Xeon Family
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
   :ebs_optimized_available: true
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 m1.xlarge:
   :deprecated: true
   :name: m1.xlarge
@@ -326,22 +326,22 @@ m1.xlarge:
   :instance_store_size: 1803886264320.0
   :instance_store_size_gb: 1680.0
   :instance_store_volumes: 4
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
   - :paravirtual
   :network_performance: :high
   :physical_processor: Intel Xeon Family
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
   :ebs_optimized_available: true
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 m3.medium:
   :deprecated: true
   :name: m3.medium
@@ -363,14 +363,14 @@ m3.medium:
   :network_performance: :moderate
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge/Sandy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 m3.large:
   :deprecated: true
   :name: m3.large
@@ -392,14 +392,14 @@ m3.large:
   :network_performance: :moderate
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge/Sandy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 m3.xlarge:
   :deprecated: true
   :name: m3.xlarge
@@ -421,14 +421,14 @@ m3.xlarge:
   :network_performance: :high
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge/Sandy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 m3.2xlarge:
   :deprecated: true
   :name: m3.2xlarge
@@ -450,14 +450,14 @@ m3.2xlarge:
   :network_performance: :high
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge/Sandy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 m4.large:
   :deprecated: false
   :name: m4.large
@@ -470,7 +470,7 @@ m4.large:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -498,7 +498,7 @@ m4.xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -526,7 +526,7 @@ m4.2xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -554,7 +554,7 @@ m4.4xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -582,7 +582,7 @@ m4.10xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -610,7 +610,7 @@ m4.16xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -638,22 +638,22 @@ m2.xlarge:
   :instance_store_size: 450971566080.0
   :instance_store_size_gb: 420.0
   :instance_store_volumes: 1
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
   - :paravirtual
   :network_performance: :moderate
   :physical_processor: Intel Xeon Family
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 m2.2xlarge:
   :deprecated: true
   :name: m2.2xlarge
@@ -666,22 +666,22 @@ m2.2xlarge:
   :instance_store_size: 912680550400.0
   :instance_store_size_gb: 850.0
   :instance_store_volumes: 1
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
   - :paravirtual
   :network_performance: :moderate
   :physical_processor: Intel Xeon Family
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
   :ebs_optimized_available: true
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 m2.4xlarge:
   :deprecated: true
   :name: m2.4xlarge
@@ -694,22 +694,22 @@ m2.4xlarge:
   :instance_store_size: 1803886264320.0
   :instance_store_size_gb: 1680.0
   :instance_store_volumes: 2
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
   - :paravirtual
   :network_performance: :high
   :physical_processor: Intel Xeon Family
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
   :ebs_optimized_available: true
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 cr1.8xlarge:
   :deprecated: true
   :name: cr1.8xlarge
@@ -729,15 +729,15 @@ cr1.8xlarge:
   - :hvm
   :network_performance: :very_high
   :physical_processor: Intel Xeon E5-2670
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
-  :ebs_optimized_available: 
-  :enhanced_networking: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
+  :ebs_optimized_available:
+  :enhanced_networking:
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 r3.large:
   :deprecated: true
   :name: r3.large
@@ -758,14 +758,14 @@ r3.large:
   :network_performance: :moderate
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 r3.xlarge:
   :deprecated: true
   :name: r3.xlarge
@@ -786,14 +786,14 @@ r3.xlarge:
   :network_performance: :moderate
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 r3.2xlarge:
   :deprecated: true
   :name: r3.2xlarge
@@ -814,14 +814,14 @@ r3.2xlarge:
   :network_performance: :high
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 r3.4xlarge:
   :deprecated: true
   :name: r3.4xlarge
@@ -842,14 +842,14 @@ r3.4xlarge:
   :network_performance: :high
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 r3.8xlarge:
   :deprecated: true
   :name: r3.8xlarge
@@ -870,14 +870,14 @@ r3.8xlarge:
   :network_performance: :very_high
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 r4.large:
   :deprecated: false
   :name: r4.large
@@ -890,7 +890,7 @@ r4.large:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -902,7 +902,7 @@ r4.large:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
   :cluster_networking: true
   :vpc_only: true
@@ -918,7 +918,7 @@ r4.xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -930,7 +930,7 @@ r4.xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
   :cluster_networking: true
   :vpc_only: true
@@ -946,7 +946,7 @@ r4.2xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -958,7 +958,7 @@ r4.2xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
   :cluster_networking: true
   :vpc_only: true
@@ -974,7 +974,7 @@ r4.4xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -986,7 +986,7 @@ r4.4xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
   :cluster_networking: true
   :vpc_only: true
@@ -1002,7 +1002,7 @@ r4.8xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1014,7 +1014,7 @@ r4.8xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
   :cluster_networking: true
   :vpc_only: true
@@ -1030,7 +1030,7 @@ r4.16xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1042,7 +1042,7 @@ r4.16xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
   :cluster_networking: true
   :vpc_only: true
@@ -1070,7 +1070,7 @@ x1.16xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
   :cluster_networking: true
   :vpc_only: true
@@ -1098,7 +1098,7 @@ x1.32xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
   :cluster_networking: true
   :vpc_only: true
@@ -1125,11 +1125,11 @@ x1e.xlarge:
   :intel_aes_ni: true
   :intel_avx: true
   :intel_avx2: true
-  :intel_turbo: 
-  :ebs_optimized_available: 
+  :intel_turbo:
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 x1e.2xlarge:
   :deprecated: false
   :name: x1e.2xlarge
@@ -1153,11 +1153,11 @@ x1e.2xlarge:
   :intel_aes_ni: true
   :intel_avx: true
   :intel_avx2: true
-  :intel_turbo: 
-  :ebs_optimized_available: 
+  :intel_turbo:
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 x1e.4xlarge:
   :deprecated: false
   :name: x1e.4xlarge
@@ -1181,11 +1181,11 @@ x1e.4xlarge:
   :intel_aes_ni: true
   :intel_avx: true
   :intel_avx2: true
-  :intel_turbo: 
-  :ebs_optimized_available: 
+  :intel_turbo:
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 x1e.8xlarge:
   :deprecated: false
   :name: x1e.8xlarge
@@ -1210,10 +1210,10 @@ x1e.8xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 x1e.16xlarge:
   :deprecated: false
   :name: x1e.16xlarge
@@ -1238,10 +1238,10 @@ x1e.16xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 x1e.32xlarge:
   :deprecated: false
   :name: x1e.32xlarge
@@ -1266,10 +1266,10 @@ x1e.32xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 i2.xlarge:
   :deprecated: true
   :name: i2.xlarge
@@ -1290,14 +1290,14 @@ i2.xlarge:
   :network_performance: :moderate
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 i2.2xlarge:
   :deprecated: true
   :name: i2.2xlarge
@@ -1318,14 +1318,14 @@ i2.2xlarge:
   :network_performance: :high
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 i2.4xlarge:
   :deprecated: true
   :name: i2.4xlarge
@@ -1346,14 +1346,14 @@ i2.4xlarge:
   :network_performance: :high
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 i2.8xlarge:
   :deprecated: true
   :name: i2.8xlarge
@@ -1374,14 +1374,14 @@ i2.8xlarge:
   :network_performance: :very_high
   :physical_processor: Intel Xeon E5-2670 v2 (Ivy Bridge)
   :processor_clock_speed: 2.5 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 i3.large:
   :deprecated: false
   :name: i3.large
@@ -1406,9 +1406,9 @@ i3.large:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 i3.xlarge:
   :deprecated: false
@@ -1434,9 +1434,9 @@ i3.xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 i3.2xlarge:
   :deprecated: false
@@ -1462,9 +1462,9 @@ i3.2xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 i3.4xlarge:
   :deprecated: false
@@ -1490,9 +1490,9 @@ i3.4xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 i3.8xlarge:
   :deprecated: false
@@ -1518,9 +1518,9 @@ i3.8xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 i3.16xlarge:
   :deprecated: false
@@ -1546,9 +1546,9 @@ i3.16xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 hi1.4xlarge:
   :deprecated: true
@@ -1571,14 +1571,14 @@ hi1.4xlarge:
   :network_performance: :very_high
   :physical_processor: Intel Xeon Family
   :processor_clock_speed: 2.4 GHz
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 hs1.8xlarge:
   :deprecated: true
   :name: hs1.8xlarge
@@ -1591,7 +1591,7 @@ hs1.8xlarge:
   :instance_store_size: 51539607552000.0
   :instance_store_size_gb: 48000.0
   :instance_store_volumes: 24
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1600,14 +1600,14 @@ hs1.8xlarge:
   :network_performance: :very_high
   :physical_processor: Intel Xeon E5-2650
   :processor_clock_speed: 2 GHz
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
-  :ebs_optimized_available: 
-  :enhanced_networking: 
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
+  :ebs_optimized_available:
+  :enhanced_networking:
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 c1.medium:
   :deprecated: true
   :name: c1.medium
@@ -1620,7 +1620,7 @@ c1.medium:
   :instance_store_size: 375809638400.0
   :instance_store_size_gb: 350.0
   :instance_store_volumes: 1
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :i386
   - :x86_64
@@ -1628,15 +1628,15 @@ c1.medium:
   - :paravirtual
   :network_performance: :moderate
   :physical_processor: Intel Xeon Family
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 c1.xlarge:
   :deprecated: true
   :name: c1.xlarge
@@ -1649,22 +1649,22 @@ c1.xlarge:
   :instance_store_size: 1803886264320.0
   :instance_store_size_gb: 1680.0
   :instance_store_volumes: 4
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
   - :paravirtual
   :network_performance: :high
   :physical_processor: Intel Xeon Family
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
   :ebs_optimized_available: true
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 c3.large:
   :deprecated: true
   :name: c3.large
@@ -1687,14 +1687,14 @@ c3.large:
   :network_performance: :moderate
   :physical_processor: Intel Xeon E5-2680 v2 (Ivy Bridge)
   :processor_clock_speed: 2.8 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 c3.xlarge:
   :deprecated: true
   :name: c3.xlarge
@@ -1716,14 +1716,14 @@ c3.xlarge:
   :network_performance: :moderate
   :physical_processor: Intel Xeon E5-2680 v2 (Ivy Bridge)
   :processor_clock_speed: 2.8 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 c3.2xlarge:
   :deprecated: true
   :name: c3.2xlarge
@@ -1745,14 +1745,14 @@ c3.2xlarge:
   :network_performance: :high
   :physical_processor: Intel Xeon E5-2680 v2 (Ivy Bridge)
   :processor_clock_speed: 2.8 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 c3.4xlarge:
   :deprecated: true
   :name: c3.4xlarge
@@ -1774,14 +1774,14 @@ c3.4xlarge:
   :network_performance: :high
   :physical_processor: Intel Xeon E5-2680 v2 (Ivy Bridge)
   :processor_clock_speed: 2.8 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 c3.8xlarge:
   :deprecated: true
   :name: c3.8xlarge
@@ -1803,14 +1803,14 @@ c3.8xlarge:
   :network_performance: :very_high
   :physical_processor: Intel Xeon E5-2680 v2 (Ivy Bridge)
   :processor_clock_speed: 2.8 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 c4.large:
   :deprecated: false
   :name: c4.large
@@ -1823,7 +1823,7 @@ c4.large:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1851,7 +1851,7 @@ c4.xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1879,7 +1879,7 @@ c4.2xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1907,7 +1907,7 @@ c4.4xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1935,7 +1935,7 @@ c4.8xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1963,7 +1963,7 @@ c5.large:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -1975,9 +1975,9 @@ c5.large:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 c5.xlarge:
   :deprecated: false
@@ -1991,7 +1991,7 @@ c5.xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2003,9 +2003,9 @@ c5.xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 c5.2xlarge:
   :deprecated: false
@@ -2019,7 +2019,7 @@ c5.2xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2031,9 +2031,9 @@ c5.2xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 c5.4xlarge:
   :deprecated: false
@@ -2047,7 +2047,7 @@ c5.4xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2059,9 +2059,9 @@ c5.4xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 c5.9xlarge:
   :deprecated: false
@@ -2075,7 +2075,7 @@ c5.9xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2087,9 +2087,9 @@ c5.9xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 c5.18xlarge:
   :deprecated: false
@@ -2103,7 +2103,7 @@ c5.18xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2115,9 +2115,9 @@ c5.18xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 c5d.large:
   :deprecated: false
@@ -2143,10 +2143,10 @@ c5d.large:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 c5d.xlarge:
   :deprecated: false
   :name: c5d.xlarge
@@ -2171,10 +2171,10 @@ c5d.xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 c5d.2xlarge:
   :deprecated: false
   :name: c5d.2xlarge
@@ -2199,10 +2199,10 @@ c5d.2xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 c5d.4xlarge:
   :deprecated: false
   :name: c5d.4xlarge
@@ -2227,10 +2227,10 @@ c5d.4xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 c5d.9xlarge:
   :deprecated: false
   :name: c5d.9xlarge
@@ -2255,10 +2255,10 @@ c5d.9xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 c5d.18xlarge:
   :deprecated: false
   :name: c5d.18xlarge
@@ -2283,10 +2283,10 @@ c5d.18xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 cc1.4xlarge:
   :deprecated: true
   :name: cc1.4xlarge
@@ -2306,15 +2306,15 @@ cc1.4xlarge:
   - :hvm
   :network_performance: :very_high
   :physical_processor: Intel Xeon E5-2670
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 cc2.8xlarge:
   :deprecated: true
   :name: cc2.8xlarge
@@ -2327,7 +2327,7 @@ cc2.8xlarge:
   :instance_store_size: 3607772528640.0
   :instance_store_size_gb: 3360.0
   :instance_store_volumes: 4
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2335,14 +2335,14 @@ cc2.8xlarge:
   :network_performance: :very_high
   :physical_processor: Intel Xeon E5-2670
   :processor_clock_speed: 2.6 GHz
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 g2.2xlarge:
   :deprecated: true
   :name: g2.2xlarge
@@ -2363,14 +2363,14 @@ g2.2xlarge:
   :network_performance: :high
   :physical_processor: Intel Xeon E5-2670 (Sandy Bridge)
   :processor_clock_speed: 2.6 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
   :ebs_optimized_available: true
-  :enhanced_networking: 
+  :enhanced_networking:
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 g2.8xlarge:
   :deprecated: true
   :name: g2.8xlarge
@@ -2391,14 +2391,14 @@ g2.8xlarge:
   :network_performance: :very_high
   :physical_processor: Intel Xeon E5-2670 (Sandy Bridge)
   :processor_clock_speed: 2.6 GHz
-  :intel_aes_ni: 
+  :intel_aes_ni:
   :intel_avx: true
-  :intel_avx2: 
+  :intel_avx2:
   :intel_turbo: true
-  :ebs_optimized_available: 
-  :enhanced_networking: 
+  :ebs_optimized_available:
+  :enhanced_networking:
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 g3.4xlarge:
   :deprecated: false
   :name: g3.4xlarge
@@ -2411,7 +2411,7 @@ g3.4xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2423,9 +2423,9 @@ g3.4xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 g3.8xlarge:
   :deprecated: false
@@ -2439,7 +2439,7 @@ g3.8xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2451,9 +2451,9 @@ g3.8xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 g3.16xlarge:
   :deprecated: false
@@ -2467,7 +2467,7 @@ g3.16xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2479,9 +2479,9 @@ g3.16xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 cg1.4xlarge:
   :deprecated: true
@@ -2495,22 +2495,22 @@ cg1.4xlarge:
   :instance_store_size: 1803886264320.0
   :instance_store_size_gb: 1680.0
   :instance_store_volumes: 2
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
   - :hvm
   :network_performance: :very_high
   :physical_processor: Intel Xeon x5570
-  :processor_clock_speed: 
-  :intel_aes_ni: 
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
-  :ebs_optimized_available: 
-  :enhanced_networking: 
-  :cluster_networking: 
-  :vpc_only: 
+  :processor_clock_speed:
+  :intel_aes_ni:
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
+  :ebs_optimized_available:
+  :enhanced_networking:
+  :cluster_networking:
+  :vpc_only:
 p2.xlarge:
   :deprecated: false
   :name: p2.xlarge
@@ -2523,7 +2523,7 @@ p2.xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2551,7 +2551,7 @@ p2.8xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2579,7 +2579,7 @@ p2.16xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2607,7 +2607,7 @@ p3.2xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2619,9 +2619,9 @@ p3.2xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 p3.8xlarge:
   :deprecated: false
@@ -2635,7 +2635,7 @@ p3.8xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2647,9 +2647,9 @@ p3.8xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 p3.16xlarge:
   :deprecated: false
@@ -2663,7 +2663,7 @@ p3.16xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2675,9 +2675,9 @@ p3.16xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 d2.xlarge:
   :deprecated: false
@@ -2706,7 +2706,7 @@ d2.xlarge:
   :ebs_optimized_available: true
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 d2.2xlarge:
   :deprecated: false
   :name: d2.2xlarge
@@ -2734,7 +2734,7 @@ d2.2xlarge:
   :ebs_optimized_available: true
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 d2.4xlarge:
   :deprecated: false
   :name: d2.4xlarge
@@ -2762,7 +2762,7 @@ d2.4xlarge:
   :ebs_optimized_available: true
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 d2.8xlarge:
   :deprecated: false
   :name: d2.8xlarge
@@ -2790,7 +2790,7 @@ d2.8xlarge:
   :ebs_optimized_available: true
   :enhanced_networking: true
   :cluster_networking: true
-  :vpc_only: 
+  :vpc_only:
 f1.2xlarge:
   :deprecated: false
   :name: f1.2xlarge
@@ -2803,21 +2803,21 @@ f1.2xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
   - :hvm
   :network_performance: :up_to_10_gigabit
   :physical_processor: Intel Xeon E5-2686 v4 (Broadwell)
-  :processor_clock_speed: 
+  :processor_clock_speed:
   :intel_aes_ni: true
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
   :ebs_optimized_available: true
-  :enhanced_networking: 
-  :cluster_networking: 
+  :enhanced_networking:
+  :cluster_networking:
   :vpc_only: true
 f1.16xlarge:
   :deprecated: false
@@ -2831,21 +2831,21 @@ f1.16xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
   - :hvm
   :network_performance: :very_high
   :physical_processor: Intel Xeon E5-2686 v4 (Broadwell)
-  :processor_clock_speed: 
+  :processor_clock_speed:
   :intel_aes_ni: true
-  :intel_avx: 
-  :intel_avx2: 
-  :intel_turbo: 
+  :intel_avx:
+  :intel_avx2:
+  :intel_turbo:
   :ebs_optimized_available: true
-  :enhanced_networking: 
-  :cluster_networking: 
+  :enhanced_networking:
+  :cluster_networking:
   :vpc_only: true
 m5.large:
   :deprecated: false
@@ -2859,7 +2859,7 @@ m5.large:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2871,9 +2871,9 @@ m5.large:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 m5.xlarge:
   :deprecated: false
@@ -2887,7 +2887,7 @@ m5.xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2899,9 +2899,9 @@ m5.xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 m5.2xlarge:
   :deprecated: false
@@ -2915,7 +2915,7 @@ m5.2xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2927,9 +2927,9 @@ m5.2xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 m5.4xlarge:
   :deprecated: false
@@ -2943,7 +2943,7 @@ m5.4xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2955,9 +2955,9 @@ m5.4xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 m5.12xlarge:
   :deprecated: false
@@ -2971,7 +2971,7 @@ m5.12xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -2983,9 +2983,9 @@ m5.12xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 m5.24xlarge:
   :deprecated: false
@@ -2999,7 +2999,7 @@ m5.24xlarge:
   :instance_store_size: 0.0
   :instance_store_size_gb: 0.0
   :instance_store_volumes: 0
-  :instance_store_type: 
+  :instance_store_type:
   :architecture:
   - :x86_64
   :virtualization_type:
@@ -3011,9 +3011,9 @@ m5.24xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 m5d.large:
   :deprecated: false
@@ -3039,10 +3039,10 @@ m5d.large:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 m5d.xlarge:
   :deprecated: false
   :name: m5d.xlarge
@@ -3067,10 +3067,10 @@ m5d.xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 m5d.2xlarge:
   :deprecated: false
   :name: m5d.2xlarge
@@ -3095,10 +3095,10 @@ m5d.2xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 m5d.4xlarge:
   :deprecated: false
   :name: m5d.4xlarge
@@ -3123,10 +3123,10 @@ m5d.4xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 m5d.12xlarge:
   :deprecated: false
   :name: m5d.12xlarge
@@ -3151,10 +3151,10 @@ m5d.12xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 m5d.24xlarge:
   :deprecated: false
   :name: m5d.24xlarge
@@ -3179,10 +3179,10 @@ m5d.24xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
-  :vpc_only: 
+  :cluster_networking:
+  :vpc_only:
 h1.2xlarge:
   :deprecated: false
   :name: h1.2xlarge
@@ -3207,9 +3207,9 @@ h1.2xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 h1.4xlarge:
   :deprecated: false
@@ -3235,9 +3235,9 @@ h1.4xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 h1.8xlarge:
   :deprecated: false
@@ -3263,9 +3263,9 @@ h1.8xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true
 h1.16xlarge:
   :deprecated: false
@@ -3291,7 +3291,7 @@ h1.16xlarge:
   :intel_avx: true
   :intel_avx2: true
   :intel_turbo: true
-  :ebs_optimized_available: 
+  :ebs_optimized_available:
   :enhanced_networking: true
-  :cluster_networking: 
+  :cluster_networking:
   :vpc_only: true

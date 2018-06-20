@@ -25,24 +25,42 @@ namespace 'aws:extract' do
     out_file = data_dir.join('aws_instance_types.yml')
     out_file_old = data_dir.join('aws_instance_types_old.yml')
 
-    instance_types = AwsApiInfo.new('EC2').api_data['shapes']['InstanceType']['enum'].freeze
+    types_list = AwsApiInfo.new('EC2').api_data['shapes']['InstanceType']['enum'].freeze
 
-    instances = AwsProductsDataCollector.new(
+    products_data, collecting_warnings = AwsProductsDataCollector.new(
       :service_name => 'AmazonEC2',
       :product_families => 'Compute Instance', # 'Dedicated Host' == bare metal: "m5", "p3", etc.
       :product_attributes => AwsInstanceDataParser::REQUIRED_ATTRIBUTES,
       :folding_attributes => 'instanceType',
       :mutable_attributes => 'currentGeneration',
-    ).products_data.sort_by do |product_data|
-      instance_type = product_data['instanceType']
-      instance_types.index(instance_type) || instance_type
-    end.map do |product_data|
-      # (list.keys - types_order).tap do |unknown_types|
-      #   coercion_errors[:types_order] = unknown_types unless unknown_types.empty?
-      # end
-      instance_data = AwsInstanceDataParser.new(product_data).instance_data
-      [product_data['instanceType'], instance_data]
+    ).result
+
+    parsing_warnings = {}
+
+    types_data = products_data.map do |product_data|
+      parser = AwsInstanceDataParser.new(product_data)
+      parsing_warnings.merge!(parser.unknown_values) { |_, old, new| old + new }
+      [product_data['instanceType'], parser.instance_data]
+    end.sort_by do |instance_type, _|
+      types_list.index(instance_type) || instance_type
     end.to_h.freeze
+
+    unknown_types = types_data.keys - types_list
+
+    ap collecting_warnings
+    ap parsing_warnings
+    ap unknown_types
+
+    # warn do
+    #   warnings..sort
+    #   lines = []
+    #   lines << 'Attention! Contradictory products data:'
+    #   lines += warnings.map do |group, attrs|
+    #     attrs.each { |k, v| attrs[k] = v.to_a if v.is_a?(Set) }
+    #     "#{group.pretty_inspect.rstrip} => #{attrs.pretty_inspect.rstrip}"
+    #   end
+    #   lines.join("\n  ")
+    # end unless parser.unknown_values.empty?
 
     # unless coercion_errors.empty?
     #   error { "Attention! Check those coercion errors:\n#{JSON.pretty_generate(coercion_errors)}" }
@@ -61,19 +79,6 @@ namespace 'aws:extract' do
     end
     Psych::Visitors::YAMLTree.prepend(Psych::Visitors::YAMLTree::Patches)
 
-    out_file.write(instances.to_yaml)
+    out_file.write(types_data.to_yaml.each_line.map(&:rstrip).join("\n") << "\n")
   end
 end
-
-# except_attributes = %w(
-#   location
-#   usagetype
-#   operation
-#   tenancy
-#   capacitystatus
-#   licenseModel
-#   preInstalledSw
-#   operatingSystem
-#   ebsOptimized
-# ).freeze
-## !!! max(ebsOptimized)

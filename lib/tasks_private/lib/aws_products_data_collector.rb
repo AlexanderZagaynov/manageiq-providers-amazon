@@ -39,6 +39,10 @@ class AwsProductsDataCollector
     @product_attributes = (@folding_attributes + @product_attributes).uniq.freeze
   end
 
+  def result
+    [products_data, @warnings]
+  end
+
   def offers_index_uri
     @offers_index_uri ||=
       URI("#{OFFERS_HOSTNAME}/offers/v1.0/aws/#{service_name}/index.json")
@@ -99,17 +103,18 @@ class AwsProductsDataCollector
         end
       end
 
-      warn do
-        warnings.sort!
-        lines = []
-        lines << 'Attention! Contradictory products data:'
-        lines += warnings.map do |group, attrs|
-          attrs.each { |k, v| attrs[k] = v.to_a if v.is_a?(Set) }
-          "#{group.pretty_inspect.rstrip} => #{attrs.pretty_inspect.rstrip}"
-        end
-        lines.join("\n  ")
-      end unless warnings.empty?
+      # warn do
+      #   warnings.sort!
+      #   lines = []
+      #   lines << 'Attention! Contradictory products data:'
+      #   lines += warnings.map do |group, attrs|
+      #     attrs.each { |k, v| attrs[k] = v.to_a if v.is_a?(Set) }
+      #     "#{group.pretty_inspect.rstrip} => #{attrs.pretty_inspect.rstrip}"
+      #   end
+      #   lines.join("\n  ")
+      # end unless warnings.empty?
 
+      @warnings = warnings
       result.values.each(&:freeze).freeze
     end
   end
