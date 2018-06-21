@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/using-ppslong.html#download-the-offer-index
-
 require 'pry-byebug'
 require 'awesome_print'
 
@@ -13,17 +11,30 @@ namespace 'aws:extract' do
     require 'json'
     require 'yaml'
     require 'net/http'
+    require 'logger'
 
     require_relative 'lib/aws_api_info'
     require_relative 'lib/aws_products_data_collector'
     require_relative 'lib/aws_instance_data_parser'
-    require_relative 'lib/simple_logging'
+
+    # require 'active_support/core_ext/module/delegation'
+    # delegate *%i(info debug warn error fatal), :to => :logger
+
+    # weird cache logging issue workaround
+    unless Rails.initialized?
+      require 'active_support/i18n'
+      I18n.backend = I18n.backend.backend
+    end
+
+    logger = Logger.new(STDOUT)
+    GithubFile.logger = logger
+    AwsProductsDataCollector.cache.logger = logger
 
     data_dir = ManageIQ::Providers::Amazon::Engine.root.join('db/fixtures')
     data_dir.mkpath
 
     out_file = data_dir.join('aws_instance_types.yml')
-    out_file_old = data_dir.join('aws_instance_types_old.yml')
+    # out_file_old = data_dir.join('aws_instance_types_old.yml')
 
     types_list = AwsApiInfo.new('EC2').api_data['shapes']['InstanceType']['enum'].freeze
 
@@ -38,9 +49,9 @@ namespace 'aws:extract' do
     parsing_warnings = {}
 
     types_data = products_data.map do |product_data|
-      parser = AwsInstanceDataParser.new(product_data)
-      parsing_warnings.merge!(parser.unknown_values) { |_, old, new| old + new }
-      [product_data['instanceType'], parser.instance_data]
+      instance_data, warnings = AwsInstanceDataParser.new(product_data).result
+      parsing_warnings.merge!(warnings) { |_, old, new| old + new }
+      [product_data['instanceType'], instance_data]
     end.sort_by do |instance_type, _|
       types_list.index(instance_type) || instance_type
     end.to_h.freeze

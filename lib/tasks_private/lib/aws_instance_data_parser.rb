@@ -2,10 +2,11 @@
 
 require 'active_support/core_ext/string/inflections'
 require 'active_support/core_ext/array/access'
-# require 'active_support/core_ext/enumerable'
-require_relative 'simple_logging'
+require_relative 'memoizable'
 
 class AwsInstanceDataParser
+  include Memoizable
+
   REQUIRED_ATTRIBUTES = %w(
     clockSpeed
     currentGeneration
@@ -63,17 +64,8 @@ class AwsInstanceDataParser
   ParsedName = Struct.new(*%i(base_type size_factor size_name))
   ParsedStorage = Struct.new(*%i(volumes size type))
 
-  class << self
-    def memoized(method_name)
-      method_name = method_name.to_sym
-      original_method_name = "_#{method_name}".to_sym
-      alias_method original_method_name, method_name
-      define_method method_name do
-      end
-    end
-  end
-
   private_constant *constants(false).without(:REQUIRED_ATTRIBUTES)
+
   attr_reader :product_data
 
   def initialize(product_data)
@@ -82,7 +74,7 @@ class AwsInstanceDataParser
     @unknown_values = {}
   end
 
-  def result
+  memoized def result
     [instance_data, unknown_values]
   end
 
@@ -97,31 +89,30 @@ class AwsInstanceDataParser
   end
 
   ### individual attributes
-  # TODO: memoize!
 
   ## general
 
-  def current_generation?
+  memoized def current_generation?
     product_data['currentGeneration'] == 'Yes'
   end
 
-  def deprecated?
+  memoized def deprecated?
     !current_generation?
   end
 
-  def instance_type
+  memoized def instance_type
     product_data['instanceType']
   end
 
-  def instance_family
+  memoized def instance_family
     product_data['instanceFamily']
   end
 
-  def base_type
+  memoized def base_type
     parsed_name.base_type
   end
 
-  def description
+  memoized def description
     description = [base_type.upcase]
     description << instance_family.titleize unless POPULAR_TYPES.include?(base_type)
     description << (size_name == 'xlarge' ? "#{size_factor}XL" : size_name.capitalize)
@@ -130,107 +121,107 @@ class AwsInstanceDataParser
 
   ## virtualization
 
-  def virtualization_type
+  memoized def virtualization_type
     VIRT_TYPES[base_type]
   end
 
-  def size_factor
+  memoized def size_factor
     parsed_name.size_factor
   end
 
-  def size_name
+  memoized def size_name
     parsed_name.size_name
   end
 
-  def vcpus
+  memoized def vcpus
     product_data['vcpu'].to_i
   end
 
   ## cpu
 
-  def physical_processor
+  memoized def physical_processor
     product_data['physicalProcessor']
   end
 
-  def cpu_clock_speed
+  memoized def cpu_clock_speed
     product_data['clockSpeed']
   end
 
-  def cpu_arches
+  memoized def cpu_arches
     CPU_ARCHES.fetch(product_data['processorArchitecture']) do |cpu_arch|
       save_unknown(cpu_arch)
     end
   end
 
-  def processor_features
+  memoized def processor_features
     product_data['processorFeatures']
   end
 
-  def intel_avx?
+  memoized def intel_avx?
     product_data['intelAvxAvailable'] == 'Yes' || !(processor_features !~ INTEL_AVX_REGEXP)
   end
 
-  def intel_avx2?
+  memoized def intel_avx2?
     product_data['intelAvx2Available'] == 'Yes' || !(processor_features !~ INTEL_AVX2_REGEXP)
   end
 
-  def intel_turbo?
+  memoized def intel_turbo?
     product_data['intelTurboAvailable'] == 'Yes' || !(processor_features !~ INTEL_TURBO_REGEXP)
   end
 
-  def intel_aes_ni?
+  memoized def intel_aes_ni?
     !deprecated?
   end
 
   ## memory
 
-  def memory
+  memoized def memory
     memory = product_data['memory']
     (MEMORY_REGEXP.match(memory)&.captures&.first || save_unknown(memory)).to_f
   end
 
   ## storage
 
-  def storage
+  memoized def storage
     product_data['storage']
   end
 
-  def ebs_only?
+  memoized def ebs_only?
     storage == 'EBS only'
   end
 
-  def ebs_optimized?
+  memoized def ebs_optimized?
     product_data['ebsOptimized'] == 'Yes'
   end
 
-  def storage_volumes
+  memoized def storage_volumes
     parsed_storage.volumes
   end
 
-  def storage_size
+  memoized def storage_size
     parsed_storage.size
   end
 
-  def storage_type
+  memoized def storage_type
     parsed_storage.type
   end
 
   ## network
 
-  def network_performance
+  memoized def network_performance
     net_perf = product_data['networkPerformance']
     net_perf =~ NETWORK_REGEXP ? :very_high : net_perf.downcase.gsub(/\s/, '_').to_sym
   end
 
-  def enhanced_networking?
+  memoized def enhanced_networking?
     product_data['enhancedNetworkingSupported'] == 'Yes'
   end
 
-  def clusterable_networking?
+  memoized def clusterable_networking?
     CLUSTERABLE_TYPES.include?(base_type)
   end
 
-  def vpc_only?
+  memoized def vpc_only?
     VPC_ONLY_TYPES.include?(base_type)
   end
 
@@ -269,26 +260,26 @@ class AwsInstanceDataParser
   end
 
   def save_unknown(value, attribute_name = nil, nils: nil)
-    attribute_name ||= caller_locations(1,1).first.label # use a bit of magic
+    attribute_name ||= caller_locations(1..1).first.label # use a bit of magic
     (@unknown_values[attribute_name.to_sym] ||= Set.new) << value
     nils ? Array.new(nils, nil) : nil
   end
 
   ### compound attributes
 
-  def parsed_name
+  memoized def parsed_name
     ParsedName.new(*(TYPE_REGEXP.match(instance_type)&.captures ||
-      save_unknown(instance_type, :instance_type, nils: 3)
+      save_unknown(instance_type, :instance_type, :nils => 3)
     )).freeze
   end
 
-  def parsed_storage
+  memoized def parsed_storage
     volumes, size, type =
       if ebs_only?
         Array.new(3, nil)
       else
         STORAGE_REGEXP.match(storage)&.captures ||
-          save_unknown(storage, :storage, nils: 3)
+          save_unknown(storage, :storage, :nils => 3)
       end
     volumes = volumes.to_i
     size = size&.gsub(/\D/, '').to_f * volumes

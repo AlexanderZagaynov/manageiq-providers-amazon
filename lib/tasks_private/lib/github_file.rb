@@ -5,7 +5,6 @@ require 'json'
 require 'base64'
 require 'pathname'
 require 'net/http'
-require_relative 'simple_logging'
 
 class GithubFile
   API_HOST = 'api.github.com'
@@ -16,6 +15,13 @@ class GithubFile
       warn 'No GitHub API key found in ENV, consider getting one at https://github.com/settings/tokens'
     end
   end.freeze
+
+  cattr_accessor :logger, :instance_writer => false
+
+  cattr_accessor :cache, :instance_writer => false do
+    ActiveSupport::Cache::FileStore.new(
+      Rails.root.join('tmp/aws_cache/products_data_collector'))
+  end
 
   attr_reader *%i(repo_path file_path cache_dir)
 
@@ -34,7 +40,7 @@ class GithubFile
 
   def latest_sha
     @latest_sha ||= get_data(commits_uri)[0]['sha'].tap do |sha|
-      debug "Latest commit SHA of '#{file_path}' file is #{sha}"
+      logger.debug "Latest commit SHA of '#{file_path}' file is #{sha}"
     end
   end
   alias_method :file_sha, :latest_sha
@@ -54,10 +60,10 @@ class GithubFile
   def content
     @content ||= begin
       if cache_file.file?
-        info "Using cached file #{cache_file}"
+        logger.info "Using cached file #{cache_file}"
         cache_file.read
       else
-        info "Getting file #{repo_path} : #{file_path}"
+        logger.info "Getting file #{repo_path} : #{file_path}"
         Base64.decode64(get_data(content_uri)['content']).tap do |data|
           cache_dir.mkpath
           cache_file.write(data)
@@ -76,7 +82,7 @@ class GithubFile
   end
 
   def make_request(uri)
-    info "Making request to #{uri}"
+    logger.info "Making request to #{uri}"
     response = Net::HTTP.start(uri.host, :use_ssl => true) do |http|
       http.get(uri.request_uri, API_HEADERS)
     end
