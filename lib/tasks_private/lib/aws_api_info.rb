@@ -6,6 +6,16 @@ require_relative 'github_file'
 class AwsApiInfo
   REPO_PATH = 'aws/aws-sdk-ruby'
 
+  API_HOST = 'api.github.com'
+
+  API_HEADERS = { 'Accept' => 'application/vnd.github.v3+json' }.tap do |headers|
+    if (api_token = ENV['GITHUB_API_TOKEN'])
+      headers.merge!('Authorization' => "token #{api_token}")
+    else
+      logger.warn 'No GitHub API key found in ENV, consider getting one at https://github.com/settings/tokens'
+    end
+  end.freeze
+
   attr_reader :service_name
 
   def initialize(service_name)

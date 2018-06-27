@@ -12,7 +12,7 @@ class GithubFile
     if (api_token = ENV['GITHUB_API_TOKEN'])
       headers.merge!('Authorization' => "token #{api_token}")
     else
-      warn 'No GitHub API key found in ENV, consider getting one at https://github.com/settings/tokens'
+      logger.warn 'No GitHub API key found in ENV, consider getting one at https://github.com/settings/tokens'
     end
   end.freeze
 
@@ -20,15 +20,14 @@ class GithubFile
 
   cattr_accessor :cache, :instance_writer => false do
     ActiveSupport::Cache::FileStore.new(
-      Rails.root.join('tmp/aws_cache/products_data_collector'))
+      Rails.root.join('tmp/aws_cache/github_file'))
   end
 
   attr_reader *%i(repo_path file_path cache_dir)
 
-  def initialize(repo_path, file_path, cache_dir: 'gh_data')
+  def initialize(repo_path, file_path)
     @repo_path = repo_path
     @file_path = file_path
-    @cache_dir = Rails.root.join('tmp', cache_dir)
   end
 
   def commits_uri
