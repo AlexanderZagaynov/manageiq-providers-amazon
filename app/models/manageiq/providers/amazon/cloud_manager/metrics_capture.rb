@@ -3,90 +3,67 @@
 class ManageIQ::Providers::Amazon::CloudManager::MetricsCapture < ManageIQ::Providers::BaseManager::MetricsCapture
   INTERVALS = [5.minutes.freeze, 1.minute.freeze].freeze
 
-  COUNTER_INFO = [
+  VIM_STYLE_COUNTERS = [
     {
-      :amazon_counters       => %w[CPUUtilization].freeze,
-      :calculation           => ->(stat, _) { stat },
-      :vim_style_counter_key => "cpu_usage_rate_average",
-    }.freeze,
+      :counter_key  => 'cpu_usage_rate_average',
+      :unit_key     => 'percent',
+      :precision    => 1,
+      :metric_names => %w[
+        CPUUtilization
+      ].freeze,
+      :calculation  => ->(stat, _) { stat },
+    },
     {
-      :amazon_counters       => %w[DiskReadBytes DiskWriteBytes].freeze,
-      :calculation           => ->(*stats, interval) { stats.compact.sum / 1024.0 / interval },
-      :vim_style_counter_key => "disk_usage_rate_average",
-    }.freeze,
+      :counter_key  => 'mem_usage_absolute_average',
+      :unit_key     => 'percent',
+      :precision    => 1,
+      :metric_names => %w[
+        MemoryUtilization
+      ].freeze,
+      :calculation  => ->(stat, _) { stat },
+    },
     {
-      :amazon_counters       => %w[NetworkIn NetworkOut].freeze,
-      :calculation           => ->(*stats, interval) { stats.compact.sum / 1024.0 / interval },
-      :vim_style_counter_key => "net_usage_rate_average",
-    }.freeze,
+      :counter_key  => 'mem_swapped_absolute_average',
+      :unit_key     => 'percent',
+      :precision    => 1,
+      :metric_names => %w[
+        SwapUtilization
+      ].freeze,
+      :calculation  => ->(stat, _) { stat },
+    },
     {
-      :amazon_counters       => %w[MemoryUtilization].freeze,
-      :calculation           => ->(stat, _) { stat },
-      :vim_style_counter_key => "mem_usage_absolute_average",
-    }.freeze,
+      :counter_key  => 'disk_usage_rate_average',
+      :unit_key     => 'kilobytespersecond',
+      :precision    => 2,
+      :metric_names => %w[
+        DiskReadBytes
+        DiskWriteBytes
+      ].freeze,
+      :calculation  => ->(*stats, interval) { stats.compact.sum / 1024.0 / interval },
+    },
     {
-      :amazon_counters       => %w[SwapUtilization].freeze,
-      :calculation           => ->(stat, _) { stat },
-      :vim_style_counter_key => "mem_swapped_absolute_average",
-    }.freeze,
-  ].freeze
+      :counter_key  => 'net_usage_rate_average',
+      :unit_key     => 'kilobytespersecond',
+      :precision    => 2,
+      :metric_names => %w[
+        NetworkIn
+        NetworkOut
+      ].freeze,
+      :calculation  => ->(*stats, interval) { stats.compact.sum / 1024.0 / interval },
+    },
+  ].each_with_object({}) do |counter, memo|
+    memo[counter.fetch(:counter_key)] = counter.merge!({
+      :instance              => '',
+      :capture_interval      => '20',
+      :capture_interval_name => 'realtime',
+      :rollup                => 'average',
+    }).freeze
+  end.freeze
 
-  COUNTER_NAMES = COUNTER_INFO.collect { |i| i[:amazon_counters] }.flatten.uniq.freeze
-
-  VIM_STYLE_COUNTERS = {
-    "cpu_usage_rate_average"       => {
-      :counter_key           => "cpu_usage_rate_average",
-      :instance              => "",
-      :capture_interval      => "20",
-      :precision             => 1,
-      :rollup                => "average",
-      :unit_key              => "percent",
-      :capture_interval_name => "realtime",
-    }.freeze,
-
-    "disk_usage_rate_average"      => {
-      :counter_key           => "disk_usage_rate_average",
-      :instance              => "",
-      :capture_interval      => "20",
-      :precision             => 2,
-      :rollup                => "average",
-      :unit_key              => "kilobytespersecond",
-      :capture_interval_name => "realtime",
-    }.freeze,
-
-    "net_usage_rate_average"       => {
-      :counter_key           => "net_usage_rate_average",
-      :instance              => "",
-      :capture_interval      => "20",
-      :precision             => 2,
-      :rollup                => "average",
-      :unit_key              => "kilobytespersecond",
-      :capture_interval_name => "realtime",
-    }.freeze,
-
-    "mem_usage_absolute_average"   => {
-      :counter_key           => "mem_usage_absolute_average",
-      :instance              => "",
-      :capture_interval      => "20",
-      :precision             => 1,
-      :rollup                => "average",
-      :unit_key              => "percent",
-      :capture_interval_name => "realtime",
-    }.freeze,
-
-    "mem_swapped_absolute_average" => {
-      :counter_key           => "mem_swapped_absolute_average",
-      :instance              => "",
-      :capture_interval      => "20",
-      :precision             => 1,
-      :rollup                => "average",
-      :unit_key              => "percent",
-      :capture_interval_name => "realtime",
-    }.freeze,
-  }.freeze
+  COUNTER_NAMES = VIM_STYLE_COUNTERS.values.flat_map { |i| i[:metric_names] }.uniq.compact.freeze
 
   def perf_collect_metrics(interval_name, start_time = nil, end_time = nil)
-    raise "No EMS defined" if target.ext_management_system.nil?
+    raise 'No EMS defined' unless ems
 
     log_header = "[#{interval_name}] for: [#{target.class.name}], [#{target.id}], [#{target.name}]"
 
@@ -179,5 +156,36 @@ class ManageIQ::Providers::Amazon::CloudManager::MetricsCapture < ManageIQ::Prov
       cloud_watch.client.list_metrics(:dimensions => filter).metrics.select { |m| m.metric_name.in?(COUNTER_NAMES) }
     end
     counters
+  end
+
+  ## attribute shortcuts
+
+  def ems
+    return @ems if defined? @ems
+    @ems = target.ext_management_system
+  end
+
+  delegate :ems_ref, :to => :target, :allow_nil => true
+  delegate :name,    :to => :target, :allow_nil => true, :prefix => true
+
+  alias resource_name target_name
+
+  def resource_group
+    return @resource_group if defined? @resource_group
+    @resource_group = target.resource_group.name
+  end
+
+  def resource_description
+    return @resource_description if defined? @resource_description
+    @resource_description = "#{resource_name}/#{resource_group}"
+  end
+
+  def provider_region
+    return @provider_region if defined? @provider_region
+    @provider_region = ems.provider_region
+  end
+
+  def storage_accounts(storage_account_service)
+    @storage_accounts ||= storage_account_service.list_all
   end
 end
